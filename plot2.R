@@ -6,7 +6,7 @@ filePath <- "./data/household_power_consumption.txt"
 if (!file.exists(filePath)) {
     fileUrl <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
     if (!dir.exists("./data")) dir.create("./data")
-    download.file(url = fileUrl, destfile = "./data/dataset.zip")
+    download.file(url = fileUrl, destfile = "./data/dataset.zip", method = "curl")
     unzip(zipfile = "./data/dataset.zip", exdir = "./data")
 }
 
